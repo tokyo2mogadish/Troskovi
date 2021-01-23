@@ -1,0 +1,33 @@
+{%extends "layout.html"%}
+{%block content%}
+    <div class = "container" style="background-color: #ffcccc;">
+        <h2>Unos troška</h2>
+        <br>
+        <form action="" class="form-horizontal">
+          <div class="form-group">            
+            <label for="kategorija" class ="control-label col-sm-2">Kategorija:</label>
+            <div class="col-sm-10">
+              <select id="kategorija" name="kategorija" class="form-control">
+                  <option value="putovanje">Putovanje</option>
+                  <option value="prodavnica">Prodavnica</option>
+                  <option value="Auto">Auto</option>
+              </select>
+            </div>
+          </div>
+          <br><br>
+          <div class ="form-group"> 
+            <label for="iznos" class ="control-label col-sm-2">Iznos:</label>
+            <div class="col-sm-10">
+              <input type="text" id="iznos" name="iznos" class="form-control">
+            </div>
+          </div>
+          <br><br>
+          <div class ="form-group"> 
+            <div class="col-sm-offset-2 col-sm-10">
+              <input type="submit"  class = "btn btn-primary m-1" value="Unesi trošak">
+            </div>
+          </div>
+          </form> 
+    </div>
+{%endblock%}
+
