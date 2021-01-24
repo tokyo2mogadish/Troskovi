@@ -17,7 +17,7 @@ def prihod():
 
 @app.route('/pregled/')
 def pregled():
-    return  render_template('pregled.html')
+    return  render_template('Pregled.html')
 
 if __name__ == '__main__' :
     app.run(debug=True)
