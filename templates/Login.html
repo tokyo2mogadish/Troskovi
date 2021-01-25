@@ -11,22 +11,24 @@
         <div class = "container" style="background-color: #ccccff;">        
             <h2>Login</h2>
             <br>
-            <form action="" class="form-horizontal">
+            <form action="" method= "post" class="form-horizontal">
                 <div class ="form-group">
                     <label for="status" id="loginStatus" class="label col-sm-2">Status</label>
                 </div>
                 <br>
                 <div class ="form-group">
-                    <label for="uname"  class ="control-label col-sm-2">Username:</label>
+                    <label for="username"  class ="control-label col-sm-2">Username:</label>
                     <div class="col-sm-10">
-                        <input type="text" id="uname" name="uname" class="form-control">
+                        <input type="text" placeholder="Username" id="username" name="username"  value="{{
+                            request.form.username }}" class="form-control">
                     </div>
                 </div>
                 <br><br>
                 <div class="form-group">
                     <label for="password" class ="control-label col-sm-2">Password:</label>
                     <div class="col-sm-10">
-                        <input type="text" id="password" name="password" class="form-control">
+                        <input type="password" placeholder = "Password" id="password" name="password" value="{{
+                            request.form.password }}" class="form-control">
                     </div>                    
                 </div>
                 <br><br>
@@ -36,6 +38,9 @@
                     </div>
                 </div>
             </form> 
+            {% if error %}
+                <p class="error"><strong>Error:</strong> {{ error }}
+            {% endif %}
         </div>
     </body>
 </html>
